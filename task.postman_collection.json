@@ -1,0 +1,233 @@
+{
+	"info": {
+		"_postman_id": "dc054bf4-fed8-4bf2-8579-602fd5885850",
+		"name": "task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27515332"
+	},
+	"item": [
+		{
+			"name": "login",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"password\": \"Admin123!@#\",\n\"email\": \"admin@codesfortomorrow.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/signin",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"signin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"fullName\": \"Hardik Joshi\",\n        \"password\": \"Joshi@12345\",\n        \"email\": \"hardik.joshi@hiteshi.com\",\n        \"gender\": \"Male\"\n     \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/signup",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "categorey",
+			"item": [
+				{
+					"name": "create-categorey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Brearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGNvZGVzZm9ydG9tb3Jyb3cuY29tIiwiaWF0IjoxNzEzOTM2MDkxLCJleHAiOjE3MTM5MzY2OTF9.urFcKIlPhZNA-av4FSJdZlddqts-vMumi8PSBFsRvgM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"study\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll-categories",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update-categorey",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "delete-categorey",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "service",
+			"item": [
+				{
+					"name": "create-service",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Breare eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGNvZGVzZm9ydG9tb3Jyb3cuY29tIiwiaWF0IjoxNzEzOTQ1NjAxLCJleHAiOjE3MTM5NDYyMDF9.0RkF9bwUUt9j47DCH1QBSN63zROizOp9Ln66_K6Q8DE",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"myservice\",\n    \"type\":\"VIP\",\n    \"options\":{\n        \"duration\":\"6 months\",\n        \"price\":600,\n        \"type\":\"Hourly\"\n    }\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/dcefcf5c-bce9-4818-a279-6415f96758b6/service",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"dcefcf5c-bce9-4818-a279-6415f96758b6",
+								"service"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll-service",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "update-service",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGNvZGVzZm9ydG9tb3Jyb3cuY29tIiwiaWF0IjoxNzEzOTY3MDI5LCJleHAiOjE3MTM5Njc2Mjl9.ZSy0u7VmOZZOlUkOtYIKlWGK8YopVMd-w_bXvPaDEss",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"myservice1\",\n    \"type\":\"VIP\",\n    \"options\":[{\n        \"duration\":\"10 months\",\n        \"price\":600,\n        \"type\":\"Hourly\"\n    },{\n        \"duration\":\"12 months\",\n        \"price\":300,\n        \"type\":\"Hourly\"\n    },{\n        \"duration\":\"1 months\",\n        \"price\":50,\n        \"type\":\"Monthly\"\n    }\n    ]\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/category/f9acf75c-520e-4076-a0da-7d821dc7af5e/service/1ef13fcd-cc05-4679-8a94-13b43e8b513f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"category",
+								"f9acf75c-520e-4076-a0da-7d821dc7af5e",
+								"service",
+								"1ef13fcd-cc05-4679-8a94-13b43e8b513f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-service",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
